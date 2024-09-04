@@ -1,14 +1,15 @@
 "use client";
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react';
 import React, { useState } from 'react';
-import { FaEyeSlash, FaPlus } from 'react-icons/fa';
-import { FaEye } from "react-icons/fa";
+
 import countryToCurrency from "country-to-currency";
 import { TiArrowSortedDown } from "react-icons/ti";
-import { FlagIcon } from "react-flag-kit";
+
 import clsx from 'clsx'
 import StatsCards from './StatsCards';
 import Image from 'next/image';
+import { FaEye, FaEyeSlash, FaPlus } from 'react-icons/fa';
+import { FlagIcon, FlagIconCode } from 'react-flag-kit';
 
 
 const DashboardHeader: React.FC = () => {
@@ -62,7 +63,7 @@ const DashboardHeader: React.FC = () => {
                             <ListboxButton className="flex justify-between p-1 bg-primary-300 gap-1 items-center relative w-fit border-l border-bg2-500">
                                 <div className="flex items-center gap-1">
                                     <FlagIcon
-                                        code={countryCode}
+                                        code={countryCode as FlagIconCode}
                                         size={16}
                                         className="rounded-full"
                                     />
@@ -88,7 +89,7 @@ const DashboardHeader: React.FC = () => {
                                         className="group flex cursor-default items-center gap-2 bg-primary-300 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10"
                                     >
                                         <FlagIcon
-                                            code={country.countryCode}
+                                            code={country.countryCode as FlagIconCode}
                                             size={16}
                                             className="rounded-full"
                                         />
