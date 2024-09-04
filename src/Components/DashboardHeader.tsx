@@ -1,13 +1,12 @@
 "use client";
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react';
 import React, { useState } from 'react';
-import { FaEye, FaEyeSlash, FaPlus } from 'react-icons/fa';
+import { FaEyeSlash, FaPlus } from 'react-icons/fa';
+import { FaEye } from "react-icons/fa";
 import countryToCurrency from "country-to-currency";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { FlagIcon } from "react-flag-kit";
 import clsx from 'clsx'
-import { CheckIcon } from '@heroicons/react/16/solid';
-import { BsFillSendFill } from 'react-icons/bs';
 import StatsCards from './StatsCards';
 import Image from 'next/image';
 
