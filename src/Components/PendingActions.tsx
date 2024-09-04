@@ -1,6 +1,7 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
-import { ChevronDownIcon } from '@heroicons/react/16/solid';
+
 import React from 'react';
+import { FaChevronDown } from 'react-icons/fa';
 
 const actions = [
     { id: 1, title: "You've received an offer of", amount: '₦3,000,000', action: 'Review offer', description: 'Invoice Factoring • Moetown Purchase Order', date: 'Today' },
@@ -21,7 +22,7 @@ const PendingActions = () => {
                 <Menu>
                     <MenuButton className="inline-flex items-center gap-2 rounded-md bg-gray-800 py-1.5 px-3 md:text-sm text-xxs font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-700 data-[open]:bg-gray-700 data-[focus]:outline-1 data-[focus]:outline-white">
                         Filter
-                        <ChevronDownIcon className="size-4 fill-white/60" />
+                        <FaChevronDown className="size-4 fill-white/60" />
                     </MenuButton>
 
                     <MenuItems

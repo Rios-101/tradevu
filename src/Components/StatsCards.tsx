@@ -1,8 +1,7 @@
 "use client"
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
-import { ChevronDownIcon } from '@heroicons/react/16/solid';
 import React from 'react';
-import { FaRegCopy } from 'react-icons/fa';
+import { FaChevronDown, FaRegCopy } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 
 const StatsCards: React.FC = () => {
@@ -76,9 +75,9 @@ const StatsCards: React.FC = () => {
                 </div>
 
                 <Menu>
-                    <MenuButton className=" py-1.5 px-3 flex items-center gap-1 text-xsm font-medium text-primary-900 text-black shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-700">
+                    <MenuButton className=" py-1.5 px-3 flex items-center gap-1 text-xsm font-medium text-primary-900 shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-700">
                         All time
-                        <ChevronDownIcon className="size-4 fill-black" />
+                        <FaChevronDown className="size-4 fill-black" />
                     </MenuButton>
 
                     <MenuItems
