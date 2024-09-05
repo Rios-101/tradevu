@@ -13,6 +13,7 @@ import { FiMenu } from "react-icons/fi";
 import { IoClose, IoPerson } from "react-icons/io5";
 import { Menu, MenuButton, MenuItem, MenuItems, Switch } from "@headlessui/react";
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
+import Link from "next/link";
 
 const Nav = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -92,7 +93,7 @@ const Nav = () => {
                 {["Dashboard", "Pay", "Finance", "Flex"].map((item, index) => (
                     <div className={`flex gap-1 hover:text-primary-100 cursor-pointer ${index === 0 && "text-primary-100  font-semibold"}`} key={item}>
                         {index === 0 && <Image alt="home" src={`/home.png`} width={24} height={26} />}
-                        <p>{item}</p>
+                        <Link href={"#"}>{item}</Link>
                     </div>
                 ))}
             </div>
@@ -200,7 +201,7 @@ const Nav = () => {
                     {["Dashboard", "Play", "Finance", "Flex"].map((item, index) => (
                         <div className={`flex gap-1 ${index === 0 && "text-primary-100 font-semibold"}`} key={item}>
                             {index === 0 && <BiSolidHomeAlt2 size={24} color="#873BFF" />}
-                            <p>{item}</p>
+                            <Link href={"#"}>{item}</Link>
                         </div>
                     ))}
                 </div>
