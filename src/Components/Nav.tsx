@@ -83,7 +83,7 @@ const Nav = () => {
     );
 
     return (
-        <div className="py-5 border-b bg-white md:px-8 px-4 flex items-center justify-between">
+        <div className="py-5 border-b bg-white md:px-8 px-4 z-50 flex items-center justify-between">
             <div className="flex gap-2 items-center pr-10">
                 <Image src={"/next.svg"} alt="logo" width={22} height={24} />
                 <h1 className="font-medium text-bg-100 text-2xl">Tradevu</h1>
