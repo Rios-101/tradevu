@@ -69,13 +69,13 @@ const Nav = () => {
             </MenuItem>
             <MenuItem>
                 <div className="flex items-center space-x-2 cursor-pointer">
-                    <IoPerson color="black" />
+                    <IoPerson color="#98A2B3" />
                     <p className="text-black">Manage Account</p>
                 </div>
             </MenuItem>
             <MenuItem>
                 <div className="flex items-center pb-2 space-x-2 cursor-pointer">
-                    <FaSignOutAlt color="black" />
+                    <FaSignOutAlt color="#98A2B3" />
                     <p className="text-black">Logout</p>
                 </div>
             </MenuItem>
@@ -86,11 +86,11 @@ const Nav = () => {
         <div className="py-5 border-b bg-white md:px-8 px-4 flex items-center justify-between">
             <div className="flex gap-2 items-center pr-10">
                 <Image src={"/next.svg"} alt="logo" width={22} height={24} />
-                <h1 className="font-bold text-lg">Tradevu</h1>
+                <h1 className="font-medium text-bg-100 text-2xl">Tradevu</h1>
             </div>
-            <div className="md:flex space-x-4 hidden items-center">
-                {["Dashboard", "Play", "Finance", "Flex"].map((item, index) => (
-                    <div className={`flex gap-1 cursor-pointer ${index === 0 && "text-primary-100  font-semibold"}`} key={item}>
+            <div className="md:flex space-x-10 hidden items-center">
+                {["Dashboard", "Pay", "Finance", "Flex"].map((item, index) => (
+                    <div className={`flex gap-1 hover:text-primary-100 cursor-pointer ${index === 0 && "text-primary-100  font-semibold"}`} key={item}>
                         {index === 0 && <Image alt="home" src={`/home.png`} width={24} height={26} />}
                         <p>{item}</p>
                     </div>
@@ -100,7 +100,7 @@ const Nav = () => {
                 <Popover>
                     <PopoverButton>
                         <div className="relative">
-                            <FaBell size={24} color="#DBDFE5" />
+                            <FaBell size={32} color="#DBDFE5" />
                             <div className="bg-green-500 absolute top-1 lg:right-0 text-xs text-white rounded-full size-2 -right-1 flex items-center justify-center" />
                         </div>
                     </PopoverButton>
