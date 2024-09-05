@@ -23,7 +23,7 @@ const Nav = () => {
     const toggleSubMenu = () => setSubMenuOpen((prev) => !prev);
 
     const renderSubMenu = () => (
-        <div className="w-60 mt-4 ml-4 flex flex-col space-y-2 origin-top-right rounded-xl border border-primary-100/40 bg-white px-3 py-2 text-sm/6 text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0">
+        <div className="w-60 mt-4 z-50 ml-4 flex flex-col space-y-2 origin-top-right rounded-xl border border-primary-100/40 bg-white px-3 py-2 text-sm/6 text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0">
             {["Logged In", "", ""].map((status, index) => (
                 <div
                     key={index}
@@ -53,7 +53,7 @@ const Nav = () => {
         <MenuItems
             transition
             anchor="bottom end"
-            className="w-60 mt-4 flex flex-col space-y-4 origin-top-right rounded-xl border border-primary-100/40 bg-white px-3 py-2 text-sm/6 text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
+            className="w-60 mt-4 z-50 flex flex-col space-y-4 origin-top-right rounded-xl border border-primary-100/40 bg-white px-3 py-2 text-sm/6 text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
         >
             <MenuItem>
                 <div
