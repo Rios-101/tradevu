@@ -83,7 +83,7 @@ const Nav = () => {
     );
 
     return (
-        <div className="py-5 border-b bg-white md:px-8 px-4 z-50 flex items-center justify-between">
+        <div className="py-5 border-b z-50 bg-white md:px-8 px-4  flex items-center justify-between">
             <div className="flex gap-2 items-center pr-10">
                 <Image src={"/next.svg"} alt="logo" width={22} height={24} />
                 <h1 className="font-medium text-bg-100 text-2xl">Tradevu</h1>
@@ -185,7 +185,7 @@ const Nav = () => {
                 className={`${menuOpen
                     ? "fixed right-0 top-0 md:w-[45%] w-[100%] lg:hidden h-screen bg-white px-4 pt-6 ease-in duration-500"
                     : "fixed right-[-100%] top-0 w-[65%] p-10 ease-in duration-500"
-                    }`}
+                    } z-50`}
             >
                 <div className="flex justify-between items-center">
                     <div className="flex gap-2 items-center pr-10">

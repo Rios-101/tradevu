@@ -86,45 +86,47 @@ const DashboardHeader: React.FC = () => {
                         <div className="text-primary-900 text-xs md:text-base pt-1">
                             Overview of your activity in
                         </div>
-                        <Listbox value={countryCode} onChange={handleChange}>
-                            <ListboxButton className="flex justify-between p-1 bg-primary-300 gap-1 items-center relative w-fit border-l border-bg2-500">
-                                <div className="flex items-center gap-1">
-                                    <FlagIcon
-                                        code={countryCode as FlagIconCode}
-
-                                        className="rounded-full w-4 h-4"
-                                    />
-                                    <span className="block truncate font-medium text-[#344054] text-xs sm:text-base">
-                                        {selectedCurrency}
-                                    </span>
-                                </div>
-                                <TiArrowSortedDown size={16} />
-                            </ListboxButton>
-                            <ListboxOptions
-                                anchor="bottom"
-                                transition
-                                className={clsx(
-                                    'w-[var(--button-width)] rounded-xl border border-white/5 bg-primary-300 mt-2 p-1 [--anchor-gap:var(--spacing-1)] focus:outline-none',
-                                    'transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0'
-                                )}
-                            >
-                                {countriez.map((country, index) => (
-
-                                    <ListboxOption
-                                        key={index}
-                                        value={country.countryCode}
-                                        className="group flex cursor-default items-center gap-2 text-[#344054] bg-primary-300 rounded-lg py-1 px-2 data-[focus]:bg-white/10"
-                                    >
+                        <div className='z-10'>
+                            <Listbox value={countryCode} onChange={handleChange}>
+                                <ListboxButton className="flex justify-between p-1 bg-primary-300 gap-1 items-center relative w-fit border-l border-bg2-500">
+                                    <div className="flex items-center gap-1">
                                         <FlagIcon
-                                            code={country.countryCode as FlagIconCode}
-                                            size={16}
-                                            className="rounded-full"
+                                            code={countryCode as FlagIconCode}
+
+                                            className="rounded-full w-4 h-4"
                                         />
-                                        {country.currencyCode}
-                                    </ListboxOption>
-                                ))}
-                            </ListboxOptions>
-                        </Listbox>
+                                        <span className="block truncate font-medium text-[#344054] text-xs sm:text-base">
+                                            {selectedCurrency}
+                                        </span>
+                                    </div>
+                                    <TiArrowSortedDown size={16} />
+                                </ListboxButton>
+                                <ListboxOptions
+                                    anchor="bottom"
+                                    transition
+                                    className={clsx(
+                                        'w-[var(--button-width)] rounded-xl border border-white/5 bg-primary-300 mt-2 p-1 [--anchor-gap:var(--spacing-1)] focus:outline-none',
+                                        'transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0'
+                                    )}
+                                >
+                                    {countriez.map((country, index) => (
+
+                                        <ListboxOption
+                                            key={index}
+                                            value={country.countryCode}
+                                            className="group flex cursor-default items-center gap-2 text-[#344054] bg-primary-300 rounded-lg py-1 px-2 data-[focus]:bg-white/10"
+                                        >
+                                            <FlagIcon
+                                                code={country.countryCode as FlagIconCode}
+                                                size={16}
+                                                className="rounded-full"
+                                            />
+                                            {country.currencyCode}
+                                        </ListboxOption>
+                                    ))}
+                                </ListboxOptions>
+                            </Listbox>
+                        </div>
                     </div>
                 </div>
                 <div className=" items-center gap-3 hidden sm:flex">
