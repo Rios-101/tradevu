@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 
 const StatsCards: React.FC = () => {
     const stats = [
-        { title: 'Your balance', amount: '₦4,350,000.20', details: '0912873465 • Sudo Bank' },
+        { title: 'Your balance', amount: '₦4,350,000.00', details: '0912873465 • Sudo Bank' },
         { title: 'Active orders', amount: '7', details: '₦0.00 overdue' },
         { title: 'Active loans', amount: '10', details: '2 pending payment' },
         { title: 'Unpaid invoices', amount: '2', details: '₦720,000.00 overdue' },
